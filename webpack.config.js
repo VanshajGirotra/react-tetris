@@ -1,21 +1,27 @@
+const nodeExternals = require('webpack-node-externals');
+
 const baseConfig = {
   mode: 'development',
   watch: true,
-  watchOptions: {
-    ignored: ['node_modules', 'serverBuild'],
-  },
 };
 const clientConfig = {
   entry: './src/client.js',
   output: {
     filename: 'clientbundle.js',
-    path: `${__dirname}/build`,
+    path: `${__dirname}/assets`,
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         use: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
       },
     ],
   },
@@ -32,6 +38,7 @@ const serverConfig = {
       {
         test: /\.jsx?$/,
         use: 'babel-loader',
+        exclude: /node_modules/,
       },
     ],
   },
@@ -39,5 +46,6 @@ const serverConfig = {
   node: {
     __dirname: false, // https://webpack.js.org/configuration/node/#node__dirname
   },
+  externals: [nodeExternals()], // https://www.npmjs.com/package/webpack-node-externals
 };
 module.exports = [{ ...baseConfig, ...serverConfig }, { ...baseConfig, ...clientConfig }];

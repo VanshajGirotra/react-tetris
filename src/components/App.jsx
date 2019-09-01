@@ -1,9 +1,8 @@
 import React from 'react';
+import Tetris from './Tetris.jsx';
 
 const App = () => (
-  <div>
-        hello world
-  </div>
+  <Tetris />
 );
 
 export default App;
