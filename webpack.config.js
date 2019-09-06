@@ -26,6 +26,9 @@ const clientConfig = {
     ],
   },
   target: 'web',
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
 };
 const serverConfig = {
   entry: './src/index.js',

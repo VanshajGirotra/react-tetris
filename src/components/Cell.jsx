@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyledCell } from './styles/StyledCell.js';
-import { SHAPES } from './helpers/shapes.js';
+import { StyledCell } from './styles/StyledCell';
+import { SHAPES } from './helpers/shapes';
 
 const Cell = ({ type = 0 }) => (
   <StyledCell type={type} color={SHAPES[type].color} />

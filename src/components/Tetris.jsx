@@ -1,9 +1,9 @@
 import React from 'react';
-import Stage from './Stage.jsx';
-import Display from './Display.jsx';
-import StartButton from './StartButton.jsx';
-import { createStage } from './helpers/gameHelpers.js';
-import { StyledTetris, StyledTetrisWrapper } from './styles/StyledTetris.js';
+import Stage from './Stage';
+import Display from './Display';
+import StartButton from './StartButton';
+import { createStage } from './helpers/gameHelpers';
+import { StyledTetris, StyledTetrisWrapper } from './styles/StyledTetris';
 
 const Tetris = () => (
   <StyledTetrisWrapper>

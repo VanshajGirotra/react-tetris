@@ -1,6 +1,6 @@
 import React from 'react';
-import Cell from './Cell.jsx';
-import StyledStage from './styles/StyledStage.js';
+import Cell from './Cell';
+import StyledStage from './styles/StyledStage';
 
 const Stage = ({ stage }) => (
   <StyledStage width={stage[0].length} height={stage.length}>
