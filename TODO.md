@@ -2,6 +2,8 @@
 
 [ ] my css is not getting prettified :(
 
-[ ] integrate styled components babel plugin 
+[ ] integrate styled components babel plugin
 
 [ ] Content type header not showing in cached response. Y Y ?
+
+[ ] prop type validation

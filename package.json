@@ -4,10 +4,12 @@
   "description": "My webpack project",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build:dev": "webpack --mode development --watch true",
     "start": "pm2 pm2/serverconf",
-    "start:dev": "nodemon build/serverbundle.js"
+    "start:dev": "nodemon build/serverbundle.js",
+    "build:prod": "webpack --mode production"
   },
+  "pre-commit":["build:prod"],
   "author": "Vanshaj Girotra",
   "license": "ISC",
   "dependencies": {
@@ -31,6 +33,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^4.2.0",
+    "pre-commit": "^1.2.2",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7",
     "webpack-node-externals": "^1.7.2"

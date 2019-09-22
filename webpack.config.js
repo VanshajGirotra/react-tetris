@@ -1,8 +1,7 @@
 const nodeExternals = require('webpack-node-externals');
 
 const baseConfig = {
-  mode: 'development',
-  watch: true,
+
 };
 const clientConfig = {
   entry: './src/client.js',
